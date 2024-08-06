@@ -1,0 +1,22 @@
+CREATE TABLE catalog (
+    product VARCHAR(255) NOT NULL,
+    product_code VARCHAR(10) NOT NULL,
+    price DECIMAL(4, 2) UNSIGNED NOT NULL,
+    PRIMARY KEY (product_code)
+);
+
+CREATE TABLE specials (
+	offer VARCHAR(100) NOT NULL,
+    active BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (offer)
+);
+
+INSERT INTO catalog (product, product_code, price) VALUES ("Red Flower", "RF1", 32.95);
+
+INSERT INTO catalog (product, product_code, price) VALUES ("Green Flower", "GF1", 24.95);
+
+INSERT INTO catalog (product, product_code, price) VALUES ("Blue Flower", "BF1", 7.95);
+
+INSERT INTO catalog (product, product_code, price) VALUES ("BOGO50R", TRUE);
+
+INSERT INTO specials (offer, active) VALUES ("FREEDEL", FALSE);
