@@ -1,3 +1,5 @@
+USE shopping_cart;
+
 CREATE TABLE catalog (
     product VARCHAR(255) NOT NULL,
     product_code VARCHAR(10) NOT NULL,
@@ -17,6 +19,6 @@ INSERT INTO catalog (product, product_code, price) VALUES ("Green Flower", "GF1"
 
 INSERT INTO catalog (product, product_code, price) VALUES ("Blue Flower", "BF1", 7.95);
 
-INSERT INTO catalog (product, product_code, price) VALUES ("BOGO50R", TRUE);
+INSERT INTO specials (offer, active) VALUES ("BOGO50R", TRUE);
 
 INSERT INTO specials (offer, active) VALUES ("FREEDEL", FALSE);
