@@ -50,7 +50,7 @@ class DatabaseHandler{
         $codes = [];
 
         while($row = $stmt->fetch()) {
-            array_push($codes, $row[0]);
+            $codes[] = $row[0];
         }
         return $codes;
     }
