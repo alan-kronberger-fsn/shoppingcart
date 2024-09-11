@@ -11,8 +11,7 @@
 
            $db = new DatabaseHandler();
            $cart = new ShoppingCart($db);
-
-           $cart->add_to_cart("BF1", "BF1", "RF1", "RF1", "RF1");
+           $cart->add_to_cart("BF1", "RF1", "RF1", "RF1");
            echo "Total: " . $cart->total() . "\n";
         ?>
     </body>

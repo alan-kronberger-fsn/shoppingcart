@@ -37,7 +37,7 @@ class DatabaseHandler{
         $offers = [];
 
         while($row = $stmt->fetch()) {
-            array_push($offers, $row[0]);
+            $offers[] = $row[0];
         }
         return $offers;
     }

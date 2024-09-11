@@ -9,11 +9,11 @@ class ShoppingCart {
         $this->db_con = $db;
     }
 
-    public function add_to_cart() {
+    public function add_to_cart(...$items) {
         $codes = $this->db_con->get_valid_codes();
-        foreach(func_get_args() as $item) {
+        foreach($items as $item) {
             if(in_array($item, $codes)) {
-                array_push($this->basket, $item);
+                $this->basket[] = $item;
             }
         }
         
